@@ -1,8 +1,17 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import UUIDService from "../services/UUIDService";
+import ArmazenamentoService from "../services/ArmazenamentoService";
 
 // Dados
 const emProducao = ref(import.meta.env.PROD)
+
+// Ciclo de vida
+onMounted(() => {
+	if (!ArmazenamentoService.seleciona('uuid'))
+		ArmazenamentoService.insere('uuid', UUIDService.gerarV4());
+});
+
 </script>
 
 <template>
