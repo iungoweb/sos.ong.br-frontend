@@ -1,16 +1,19 @@
 <script setup lang="ts">
+import { ref } from "vue";
 
+// Dados
+const emProducao = ref(import.meta.env.VITE_BASE_URL_API === 'prod')
 </script>
 
 <template>
 
 <div class="col-center">
 
-	<h1 class="text-3xl font-bold mb-10">Em desenvolvimento!</h1>
+	<h1 v-if="emProducao" class="text-3xl font-bold mb-10">Em desenvolvimento!</h1>
 
-	<h1 v-if="false" class="text-3xl font-bold mb-10">Você quer...</h1>
+	<h1 v-if="!emProducao" class="text-3xl font-bold mb-10">Você quer...</h1>
 
-	<div v-if="false" class="max-w-max">
+	<div v-if="!emProducao" class="max-w-max">
 		<RouterLink
 			to="/me-ajude"
 			class="btn btn-bg mb-7"
