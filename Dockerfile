@@ -9,6 +9,9 @@ RUN npm install
 COPY . .
 
 FROM builder as prod-builder
+
+COPY .env .
+
 RUN npm run build
 
 FROM nginx:latest as prod
