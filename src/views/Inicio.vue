@@ -2,7 +2,7 @@
 import { ref } from "vue";
 
 // Dados
-const emProducao = ref(import.meta.env.VITE_BASE_URL_API === 'prod')
+const emProducao = ref(import.meta.env.PROD)
 </script>
 
 <template>
