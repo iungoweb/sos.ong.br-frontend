@@ -2,11 +2,10 @@
 </script>
 
 <template>
-<main>
+<main class="max-w-xl mx-auto">
 	<RouterView/>
 </main>
 </template>
 
 <style scoped>
-
 </style>
