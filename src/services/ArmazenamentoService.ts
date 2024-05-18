@@ -68,11 +68,11 @@ class ArmazenamentoService {
 		return null;
 	}
 
-	insere(key: string, value: string, options?: OpcoesArmazenamento) {
+	insere(key: string, value: any, options?: OpcoesArmazenamento) {
 		this.setCookie(key, value, options);
 	}
 
-	atualiza(key: string, value: string, options?: OpcoesArmazenamento) {
+	atualiza(key: string, value: any, options?: OpcoesArmazenamento) {
 		this.insere(key, value, options);
 	}
 

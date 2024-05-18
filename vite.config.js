@@ -7,6 +7,6 @@ export default defineConfig({
 	plugins: [vue(), basicSsl({})],
 	server: {
 		host: "0.0.0.0",
-		https: true
+		https: false
 	}
 });

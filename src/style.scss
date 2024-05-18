@@ -32,15 +32,19 @@ a {
 	}
 }
 
+:disabled { @apply cursor-not-allowed; }
+
 /* Fomulários */
 form {
 	label,
 	legend {
-		@apply block text-xl font-medium leading-6 text-white;
+		@apply block text-xl font-medium leading-6 text-white cursor-pointer;
 	}
 }
 
 input[type="text"],
-input[type="number"] {
-	@apply block w-full rounded-full border-0 py-1.5 px-3 text-black placeholder:text-gray-400;
+input[type="number"],
+select {
+	@apply block w-full rounded-full border-0 py-1.5 px-4 text-black placeholder:text-gray-400 outline-none
+	leading-3;
 }

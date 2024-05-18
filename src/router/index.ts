@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import Inicio from "../views/Inicio.vue";
 import { atualizarMetaDescription } from "../utils/dom";
 import MeAjude from "../views/MeAjude.vue";
-import Socorrer from "../views/Socorrer.vue";
+
+const Socorrer = () => import("../views/Socorrer.vue")
 
 const router = createRouter({
 	history: createWebHistory(),
